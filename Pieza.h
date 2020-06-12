@@ -1,5 +1,6 @@
 #ifndef PIEZA_H
 #define PIEZA_H
+#include "Tablero.h"
 
 class Pieza
 {

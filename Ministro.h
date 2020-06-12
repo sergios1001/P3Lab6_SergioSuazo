@@ -7,6 +7,7 @@ class Ministro : public Pieza
 {
 	public:
 		Ministro();
+		bool valid(int fil, int col, Tablero* tab);
 		~Ministro();
 	protected:
 };

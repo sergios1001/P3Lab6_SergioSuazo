@@ -7,6 +7,7 @@ class Elefante : public Pieza
 {
 	public:
 		Elefante();
+		bool valid(int fil, int col, Tablero* tab);
 		~Elefante();
 	protected:
 };
