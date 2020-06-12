@@ -1,11 +1,10 @@
 #include "Pieza.h"
 #include <iostream>
 
-Pieza::Pieza(int fil, int col,Pieza*** tab,bool jug)
+Pieza::Pieza(int fil, int col,bool jug)
 {
 	fila = fil;
 	columna = col;
-	tablero = tab;
 	jugador = jug;
 }
 
@@ -14,34 +13,33 @@ bool Pieza::validarBordes(int fil, int col){
 }
 
 char Pieza::getChar(){
-	return character;
+	return caracter;
 }
 
 bool Pieza::getJugador(){
 	return jugador;
 }
 
-bool Pieza::movimiento(int fil, int col)
+bool Pieza::movimiento(int fil, int col, Tablero* tab)
 {
-	if(valid(fil, col)){
+	if(valid(fil, col, tab)){
 		
-		if(Pieza* p = tablero[fil][col])
+		if(Pieza* p = tab[fil][col])
 		{
 			delete p;
-			tablero[fil][col] = NULL;
+			tab[fil][col] = NULL;
 		}
 		
-		tablero[fil][col] = tablero [fila][columna];
-		tablero[fila][columna] = NULL;
+		tab[fil][col] = tab [fila][columna];
+		tab[fila][columna] = NULL;
 		fila = fil;
 		columna = col;
 	}
 }
 
-bool Pieza::valid(int fil,int col){
+bool Pieza::valid(int fil,int col, Tablero* tab){
 	return false;
 }
-
 
 Pieza::~Pieza()
 {

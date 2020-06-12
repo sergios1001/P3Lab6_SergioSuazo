@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o Chaturanga.o Pieza.o
-LINKOBJ  = main.o Chaturanga.o Pieza.o
+OBJ      = main.o Chaturanga.o Pieza.o Infanteria.o Torre.o Caballo.o Elefante.o Ministro.o Rey.o Casilla.o Char.o Tablero.o
+LINKOBJ  = main.o Chaturanga.o Pieza.o Infanteria.o Torre.o Caballo.o Elefante.o Ministro.o Rey.o Casilla.o Char.o Tablero.o
 LIBS     = -L"D:/Program Files/Dev-Cpp/MinGW64/lib" -L"D:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"D:/Program Files/Dev-Cpp/MinGW64/include" -I"D:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"D:/Program Files/Dev-Cpp/MinGW64/include" -I"D:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -32,3 +32,30 @@ Chaturanga.o: Chaturanga.cpp
 
 Pieza.o: Pieza.cpp
 	$(CPP) -c Pieza.cpp -o Pieza.o $(CXXFLAGS)
+
+Infanteria.o: Infanteria.cpp
+	$(CPP) -c Infanteria.cpp -o Infanteria.o $(CXXFLAGS)
+
+Torre.o: Torre.cpp
+	$(CPP) -c Torre.cpp -o Torre.o $(CXXFLAGS)
+
+Caballo.o: Caballo.cpp
+	$(CPP) -c Caballo.cpp -o Caballo.o $(CXXFLAGS)
+
+Elefante.o: Elefante.cpp
+	$(CPP) -c Elefante.cpp -o Elefante.o $(CXXFLAGS)
+
+Ministro.o: Ministro.cpp
+	$(CPP) -c Ministro.cpp -o Ministro.o $(CXXFLAGS)
+
+Rey.o: Rey.cpp
+	$(CPP) -c Rey.cpp -o Rey.o $(CXXFLAGS)
+
+Casilla.o: Casilla.cpp
+	$(CPP) -c Casilla.cpp -o Casilla.o $(CXXFLAGS)
+
+Char.o: Char.cpp
+	$(CPP) -c Char.cpp -o Char.o $(CXXFLAGS)
+
+Tablero.o: Tablero.cpp
+	$(CPP) -c Tablero.cpp -o Tablero.o $(CXXFLAGS)
