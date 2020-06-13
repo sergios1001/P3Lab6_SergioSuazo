@@ -10,10 +10,10 @@ class Tablero
 		Tablero();
 		
 		void printTablero();
+		Pieza*** getTab();
 		
 		~Tablero();
 	protected:
-		//matriz de apuntadores a casillas
 		Pieza*** matriz; 
 		int size;
 };

@@ -6,7 +6,7 @@
 class Rey : public Pieza
 {
 	public:
-		Rey();
+		Rey(int fil, int col, bool jug);
 		bool valid(int fil, int col, Tablero* tab);
 		~Rey();
 	protected:

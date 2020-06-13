@@ -6,7 +6,7 @@
 class Torre : public Pieza
 {
 	public:
-		Torre();
+		Torre(int fil,int col,bool jug);
 		bool valid(int fil, int col, Tablero* tab);
 		~Torre();
 	protected:

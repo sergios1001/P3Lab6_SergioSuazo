@@ -6,7 +6,7 @@
 class Caballo : public Pieza
 {
 	public:
-		Caballo();
+		Caballo(int fil,int col,bool jug);
 		bool valid(int fil, int col, Tablero* tab);
 		~Caballo();
 	protected:

@@ -6,7 +6,7 @@
 class Infanteria : public Pieza
 {
 	public:
-		Infanteria();
+		Infanteria(int fil,int col,bool jug);
 		
 		bool valid(int fil, int col, Tablero* tab);
 		

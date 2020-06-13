@@ -1,4 +1,5 @@
 #include "Pieza.h"
+#include "Tablero.h"
 #include <iostream>
 
 Pieza::Pieza(int fil, int col,bool jug)
@@ -24,14 +25,14 @@ bool Pieza::movimiento(int fil, int col, Tablero* tab)
 {
 	if(valid(fil, col, tab)){
 		
-		if(Pieza* p = tab[fil][col])
+		if(Pieza* p = tab->getTab()[fil][col])
 		{
 			delete p;
-			tab[fil][col] = NULL;
+			tab->getTab()[fil][col] = NULL;
 		}
 		
-		tab[fil][col] = tab [fila][columna];
-		tab[fila][columna] = NULL;
+		tab->getTab()[fil][col] = tab->getTab()[fila][columna];
+		tab->getTab()[fila][columna] = NULL;
 		fila = fil;
 		columna = col;
 	}

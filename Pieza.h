@@ -1,14 +1,17 @@
 #ifndef PIEZA_H
 #define PIEZA_H
-#include "Tablero.h"
+class Tablero;
 
 class Pieza
 {
 	public:
 		Pieza(int fil,int col,bool jug);
-		bool movimiento(int fil, int col, Tablero* tab);
+		bool movimiento(int, int, Tablero*);
 		char getChar();
 		bool getJugador();
+		virtual bool valid(int, int ,Tablero*)=0;
+		bool validarBordes(int ,int );
+		
 		
 		~Pieza();
 	protected:
@@ -18,8 +21,6 @@ class Pieza
 		char caracter;
 		bool jugador;
 		
-		bool validarBordes(int fil,int col);
-		virtual bool valid(int fil, int col,Tablero* tab)=0;
 };
 
 #endif
